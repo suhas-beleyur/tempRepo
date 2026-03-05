@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HumbhA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Animated Doodle Canvas -->
+<canvas id="doodle-canvas"></canvas>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <a href="#" class="nav-logo">HumbhA<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire me →</a>
+</nav>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <!-- Floating doodles -->
+    <div class="doodle doodle-star" style="top:20%;left:10%;animation-delay:0s;">✦</div>
+    <div class="doodle doodle-star" style="top:35%;left:5%;font-size:0.9rem;animation-delay:1s;color:var(--accent2)">★</div>
+    <div class="doodle doodle-x" style="top:60%;left:8%;font-size:1.4rem;animation-delay:0.5s">✕</div>
+    <div class="doodle doodle-plus" style="top:75%;left:15%;animation-delay:1.5s;">+</div>
+    <div class="doodle doodle-dot" style="top:15%;left:22%;width:6px;height:6px;animation-delay:0.8s;"></div>
+    <div class="doodle doodle-dot" style="top:80%;left:40%;width:10px;height:10px;animation-delay:2s;background:var(--accent2)"></div>
+    <div class="doodle doodle-circle" style="bottom:15%;right:15%;width:80px;height:80px;"></div>
+    <div class="doodle" style="top:25%;right:30%;font-size:1.8rem;animation:float 6s ease-in-out infinite;animation-delay:1s;">◇</div>
+
+    <div class="container">
+      <p class="hero-eyebrow">Available for work · Based in Namma Bengaluru</p>
+
+      <h1 class="hero-name">
+        <!-- ✏️ Change to your first and last name -->
+        <span class="word-1">Suhas</span>
+        <span class="word-2">Beleyur</span>
+      </h1>
+
+      <p class="hero-role">Intern @TheTapacademy</p>
+
+      <p class="hero-tagline">
+        I build some stuff for fun 😁.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View my work ↓</a>
+        <a href="#contact" class="btn-secondary">Let's talk</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="marquee">
+      <!-- duplicated for seamless loop -->
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <p class="section-label">About me</p>
+          <h2 class="about-heading">
+            I turn <em>ideas</em> into<br/>digital reality
+          </h2>
+          <p class="about-text">
+            <!-- ✏️ Replace with your own bio -->
+            I'm a full-stack developer obsessed with the intersection of design and code. I love turning wild ideas into elegant, interactive experiences that make people smile. Currently open to new opportunities.
+          </p>
+          <div class="about-stats">
+            <!-- ✏️ Update your stats -->
+            <div class="stat"><span class="stat-number">🥚</span><span class="stat-label">Years exp.</span></div>
+            <div class="stat"><span class="stat-number">6</span><span class="stat-label">Projects</span></div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="about-photo-placeholder">🧑‍💻</div>
+          <!-- ✏️ Replace emoji with: <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:32px" /> -->
+          <div class="about-tag about-tag-1">✦ Creative Dev</div>
+          <div class="about-tag about-tag-2">◎ San Francisco</div>
+          <!-- Orbit rings -->
+          <div class="orbit-container">
+            <div class="orbit-ring"></div>
+            <div class="orbit-dot" style="--dur:8s"></div>
+            <div class="orbit-dot" style="--dur:12s;background:var(--accent2);animation-direction:reverse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="container">
+      <div class="skills-header reveal">
+        <p class="section-label">What I do</p>
+        <h2 class="skills-heading">My Toolkit</h2>
+      </div>
+      <div class="skills-grid">
+        <!-- ✏️ Edit or add skill cards freely -->
+        <div class="skill-card reveal" data-color="yellow">
+          <span class="skill-icon">⚡</span>
+          <h3 class="skill-name">Frontend Dev</h3>
+          <p class="skill-desc">Crafting fast, accessible, and beautifully animated interfaces that users love.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Framer Motion</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-color="orange">
+          <span class="skill-icon">🖧</span>
+          <h3 class="skill-name">Backend Dev</h3>
+          <p class="skill-desc">Building robust APIs and scalable systems that power products end-to-end.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Redis</span>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-color="purple">
+          <span class="skill-icon">🎨</span>
+          <h3 class="skill-name">UI/UX Design</h3>
+          <p class="skill-desc">Translating complex problems into clean, delightful, and intuitive user experiences.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">Prototyping</span>
+          </div>
+        </div>
+        <!-- ✏️ Add more skill cards here by copy-pasting a .skill-card block -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="container">
+      <div class="projects-header reveal">
+        <p class="section-label">Selected Work</p>
+        <h2 class="projects-heading">Things I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 — ✏️ Edit all project details -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <div class="project-visual-inner pv1">🛸</div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">Project 01 / 2024</p>
+            <h3 class="project-name">Project Alpha</h3>
+            <p class="project-desc">A SaaS dashboard for tracking creative workflows. Built with real-time collaboration and a focus on delightful micro-interactions.</p>
+            <div class="project-tech">
+              <span>React</span><span>WebSockets</span><span>Tailwind</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">↗ Live Demo</a>
+              <a href="#" class="project-link">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <div class="project-visual-inner pv2">🔥</div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">Project 02 / 2024</p>
+            <h3 class="project-name">Project Beta</h3>
+            <p class="project-desc">An AI-powered writing tool that helps teams produce high-quality content faster. Integrated with GPT-4 and custom fine-tuned models.</p>
+            <div class="project-tech">
+              <span>Next.js</span><span>OpenAI</span><span>Postgres</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">↗ Live Demo</a>
+              <a href="#" class="project-link">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <div class="project-visual-inner pv3">🌌</div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">Project 03 / 2023</p>
+            <h3 class="project-name">Project Gamma</h3>
+            <p class="project-desc">A 3D portfolio experience using Three.js, featuring procedural geometry and physics-based interactions that respond to mouse movement.</p>
+            <div class="project-tech">
+              <span>Three.js</span><span>GSAP</span><span>WebGL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">↗ Live Demo</a>
+              <a href="#" class="project-link">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ Copy-paste a .project-card block to add more projects -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="contact-glow"></div>
+    <!-- More doodles -->
+    <div class="doodle doodle-star" style="top:20%;left:5%;font-size:2rem;animation-delay:0.5s">✦</div>
+    <div class="doodle doodle-star" style="bottom:20%;right:5%;font-size:1.4rem;animation-delay:1s;color:var(--accent2)">★</div>
+    <div class="doodle doodle-plus" style="top:30%;right:12%;font-size:1.8rem">+</div>
+    <div class="doodle doodle-x" style="bottom:35%;left:10%">✕</div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="reveal">
+        <p class="section-label contact-label">Say hello</p>
+        <h2 class="contact-heading">
+          Let's make<br/><span>something</span><br/>together.
+        </h2>
+        <p class="contact-sub">
+          Whether you have a project in mind, want to collaborate, or just want to chat — my inbox is always open.
+        </p>
+        <!-- ✏️ Replace with your email -->
+        <a href="mailto:hello@yourname.dev" class="contact-email">hello@yourname.dev</a>
+        <br/>
+        <div class="social-links">
+          <!-- ✏️ Update href values with your real social links -->
+          <a href="https://github.com" class="social-link" target="_blank" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com" class="social-link" target="_blank" title="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://twitter.com" class="social-link" target="_blank" title="Twitter/X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="mailto:hello@yourname.dev" class="social-link" title="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <p>© 2025 Alex Rivera. Built with 🤍 and too much coffee.</p>
+  <div class="footer-right">Designed & developed by <span>Alex Rivera</span></div>
+</footer>
+
+<script>
+  // ============================
+  // MARQUEE — ✏️ Edit these skills
+  // ============================
+  const skills = [
+    'React', 'JavaScript','TypeScript', 'Node.js', 'Figma', 'Next.js', 'DSA',
+    'Python', 'PostgreSQL', 'Tailwind', 'GraphQL',
+    'Docker', 'AWS', 'GSAP', ];
+  const marquee = document.getElementById('marquee');
+  const repeated = [...skills, ...skills, ...skills];
+  marquee.innerHTML = repeated.map(s => `<span class="marquee-item">${s}</span>`).join('');
+
+  // ============================
+  // CUSTOM CURSOR
+  // ============================
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+  });
+  (function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  })();
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+      ring.style.width = '56px';
+      ring.style.height = '56px';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '12px';
+      cursor.style.height = '12px';
+      ring.style.width = '36px';
+      ring.style.height = '36px';
+    });
+  });
+
+  // ============================
+  // ANIMATED DOODLE CANVAS
+  // ============================
+  const canvas = document.getElementById('doodle-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+  const colors = ['#e8ff47', '#ff6b35', '#7c5cbf', '#4ade80'];
+  const doodles = [];
+
+  class Doodle {
+    constructor() { this.reset(true); }
+    reset(init) {
+      this.x = Math.random() * canvas.width;
+      this.y = init ? Math.random() * canvas.height : canvas.height + 40;
+      this.size = 6 + Math.random() * 18;
+      this.type = Math.floor(Math.random() * 5); // 0=circle, 1=star, 2=cross, 3=square, 4=zigzag
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+      this.alpha = 0.08 + Math.random() * 0.18;
+      this.vx = (Math.random() - 0.5) * 0.4;
+      this.vy = -0.3 - Math.random() * 0.5;
+      this.angle = Math.random() * Math.PI * 2;
+      this.vr = (Math.random() - 0.5) * 0.02;
+    }
+    draw() {
+      ctx.save();
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.angle);
+      ctx.globalAlpha = this.alpha;
+      ctx.strokeStyle = this.color;
+      ctx.lineWidth = 1.5;
+      ctx.lineCap = 'round';
+      const s = this.size;
+      ctx.beginPath();
+      switch(this.type) {
+        case 0: // circle
+          ctx.arc(0, 0, s, 0, Math.PI*2); break;
+        case 1: // star
+          for(let i = 0; i < 5; i++) {
+            const a = (i * 4 * Math.PI / 5) - Math.PI/2;
+            const b = a + 2*Math.PI/5;
+            i === 0 ? ctx.moveTo(Math.cos(a)*s, Math.sin(a)*s) : ctx.lineTo(Math.cos(a)*s, Math.sin(a)*s);
+            ctx.lineTo(Math.cos(b)*s*0.4, Math.sin(b)*s*0.4);
+          }
+          ctx.closePath(); break;
+        case 2: // cross
+          ctx.moveTo(-s, 0); ctx.lineTo(s, 0);
+          ctx.moveTo(0, -s); ctx.lineTo(0, s); break;
+        case 3: // square
+          ctx.rect(-s, -s, s*2, s*2); break;
+        case 4: // zigzag
+          ctx.moveTo(-s, s/2);
+          for(let i = 0; i < 5; i++) {
+            ctx.lineTo(-s + i*(s*2/4), i%2===0 ? s/2 : -s/2);
+          }
+          ctx.lineTo(s, s/2); break;
+      }
+      ctx.stroke();
+      ctx.restore();
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.angle += this.vr;
+      if (this.y < -40) this.reset(false);
+    }
+  }
+
+  for(let i = 0; i < 55; i++) doodles.push(new Doodle());
+
+  function animateCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    doodles.forEach(d => { d.update(); d.draw(); });
+    requestAnimationFrame(animateCanvas);
+  }
+  animateCanvas();
+
+  // ============================
+  // SCROLL REVEAL
+  // ============================
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if(e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+
+  // ============================
+  // PARALLAX DOODLES ON MOUSE
+  // ============================
+  document.addEventListener('mousemove', e => {
+    const doodleEls = document.querySelectorAll('.doodle');
+    const xRatio = (e.clientX / window.innerWidth - 0.5);
+    const yRatio = (e.clientY / window.innerHeight - 0.5);
+    doodleEls.forEach((d, i) => {
+      const factor = (i % 3 + 1) * 8;
+      d.style.transform = `translate(${xRatio * factor}px, ${yRatio * factor}px)`;
+    });
+  });
+</script>
+</body>
+</html>
