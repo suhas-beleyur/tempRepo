@@ -23,6 +23,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#resume">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Hire me →</a>
@@ -96,8 +97,7 @@
           </div>
         </div>
         <div class="about-visual reveal">
-          <div class="about-photo-placeholder"><img src="./images/image.png" style="width:100%;height:100%;object-fit:cover;border-radius:32px" /></div>
-          <!-- ✏️ Replace emoji with: <img src="your-photo.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:32px" /> -->
+          <div class="about-photo-placeholder"><img src="./images/image.png" alt="Suhas B S" /></div>
           <div class="about-tag about-tag-1">✦ Creative Dev</div>
           <div class="about-tag about-tag-2">◎ Bengaluru</div>
           <!-- Orbit rings -->
@@ -167,17 +167,19 @@
       </div>
       <div class="projects-grid">
 
-        <!-- PROJECT 1 — ✏️ Edit all project details -->
+        <!-- PROJECT 1 — File Transfer System -->
         <div class="project-card reveal">
           <div class="project-visual">
-            <div class="project-visual-inner pv1">1.</div>
+            <div class="project-visual-inner pv1">
+              <img src="./images/project_file_transfer.png" alt="File Transfer System" class="project-img" />
+            </div>
           </div>
           <div class="project-info">
             <p class="project-num">Project 01 / 2025</p>
             <h3 class="project-name">File Transfer System</h3>
-            <p class="project-desc">A P2P file transfer system where 2 devices can share any sort of file without any middle storage. Files are encrypted with DTLS and transferred through SCTP data channel.</p>
+            <p class="project-desc">A P2P file transfer system enabling secure file sharing up to 2GB without server storage, reducing cost by up to 90%. Files are encrypted with DTLS and transferred through SCTP data channels with real-time progress tracking.</p>
             <div class="project-tech">
-              <span>React</span><span>WebSockets</span><span>WebRTC</span><span>Node.js</span>
+              <span>React</span><span>WebRTC</span><span>Node.js</span><span>DTLS</span>
             </div>
             <div class="project-links">
               <a href="https://share-filez.vercel.app/" class="project-link">↗ Live Demo</a>
@@ -186,45 +188,82 @@
           </div>
         </div>
 
-        <!-- PROJECT 2 -->
+        <!-- PROJECT 2 — WebSockets Chat Application -->
         <div class="project-card reveal">
           <div class="project-visual">
-            <div class="project-visual-inner pv2">2.</div>
+            <div class="project-visual-inner pv2">
+              <img src="./images/project_chat_app.png" alt="WebSockets Chat Application" class="project-img" />
+            </div>
           </div>
           <div class="project-info">
             <p class="project-num">Project 02 / 2025</p>
-            <h3 class="project-name">Project Beta</h3>
-            <p class="project-desc">An AI-powered writing tool that helps teams produce high-quality content faster. Integrated with GPT-4 and custom fine-tuned models.</p>
+            <h3 class="project-name">WebSockets Chat App</h3>
+            <p class="project-desc">A real-time chat system supporting 100+ concurrent users with instant message delivery. Features JWT-based authentication for secure sessions and optimized PostgreSQL schema for efficient message storage and retrieval.</p>
             <div class="project-tech">
-              <span>Next.js</span><span>OpenAI</span><span>Postgres</span>
+              <span>Node.js</span><span>Express.js</span><span>WebSockets</span><span>JWT</span><span>PostgreSQL</span>
             </div>
             <div class="project-links">
               <a href="#" class="project-link">↗ Live Demo</a>
-              <a href="#" class="project-link">⌥ GitHub</a>
+              <a href="https://github.com/suhas-beleyur" target="_blank" class="project-link">⌥ GitHub</a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 3 -->
+        <!-- PROJECT 3 — Voice-Based AI Assistant -->
         <div class="project-card reveal">
           <div class="project-visual">
-            <div class="project-visual-inner pv3">3.</div>
+            <div class="project-visual-inner pv3">
+              <img src="./images/project_voice_ai.png" alt="Voice-Based AI Assistant" class="project-img" />
+            </div>
           </div>
           <div class="project-info">
-            <p class="project-num">Project 03 / 2023</p>
-            <h3 class="project-name">Project Gamma</h3>
-            <p class="project-desc">A 3D portfolio experience using Three.js, featuring procedural geometry and physics-based interactions that respond to mouse movement.</p>
+            <p class="project-num">Project 03 / 2025</p>
+            <h3 class="project-name">Voice-Based AI Assistant</h3>
+            <p class="project-desc">An AI voice assistant integrating speech-to-text, LLM processing, and text-to-speech. Automates tasks like web search and application launching via natural language commands for hands-free system control.</p>
             <div class="project-tech">
-              <span>Three.js</span><span>GSAP</span><span>WebGL</span>
+              <span>Python</span><span>JavaScript</span><span>LLM API</span><span>Speech APIs</span>
             </div>
             <div class="project-links">
               <a href="#" class="project-link">↗ Live Demo</a>
-              <a href="#" class="project-link">⌥ GitHub</a>
+              <a href="https://github.com/suhas-beleyur" target="_blank" class="project-link">⌥ GitHub</a>
             </div>
           </div>
         </div>
 
-        <!-- ✏️ Copy-paste a .project-card block to add more projects -->
+        <!-- PROJECT 4 — WebRTC Basics -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <div class="project-visual-inner pv4">
+              <img src="./images/project_webrtc.png" alt="WebRTC Basics" class="project-img" />
+            </div>
+          </div>
+          <div class="project-info">
+            <p class="project-num">Project 04 / 2025</p>
+            <h3 class="project-name">WebRTC Basics</h3>
+            <p class="project-desc">A comprehensive implementation and foundational guide for real-time peer-to-peer communication over the web.</p>
+            <div class="project-tech">
+              <span>JavaScript</span><span>WebRTC</span><span>Sockets</span>
+            </div>
+            <div class="project-links">
+              <a href="https://webrtc-basics.vercel.app" target="_blank" class="project-link">↗ Live Demo</a>
+              <a href="https://github.com/suhas-beleyur/webrtc-basics" target="_blank" class="project-link">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESUME ============ -->
+  <section id="resume">
+    <div class="container">
+      <div class="resume-header reveal">
+        <p class="section-label">My Resume</p>
+        <h2 class="resume-heading">Curriculum Vitae</h2>
+        <p class="resume-sub">Take a look at my full resume to know more about my experience, skills, and education.</p>
+        <div class="resume-actions">
+          <button class="btn-primary" id="resume-view-btn" onclick="openResume()">📄 Show Resume</button>
+        </div>
       </div>
     </div>
   </section>
@@ -265,7 +304,7 @@
 
 <!-- ============ FOOTER ============ -->
 <footer>
-  <p>© 2025 Suhas B S. Built with 🤍 and too much coffee.</p>
+  <p>© 2026 Suhas B S. Built with 🤍 and too much coffee.</p>
   <div class="footer-right">Designed & developed by <span>Suhas B S</span></div>
 </footer>
 <script src="script.js"></script>

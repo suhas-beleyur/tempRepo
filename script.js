@@ -143,3 +143,13 @@ doodleEls.forEach((d, i) => {
     d.style.transform = `translate(${xRatio * factor}px, ${yRatio * factor}px)`;
 });
 });
+
+// ============================
+// RESUME — OPEN IN NEW TAB
+// ============================
+function openResume() {
+  // Build a dynamic base path so it works on GitHub Pages, custom domains, and localhost
+  const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+  const resumePath = basePath + 'resume/Suhas%20B%20S.pdf';
+  window.open(resumePath, '_blank');
+}

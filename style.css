@@ -236,19 +236,24 @@ nav {
 .stat-label { font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); }
 
 .about-visual {
-    position: relative; aspect-ratio: 1;
+    position: relative; aspect-ratio: auto;
+    max-height: 500px;
 }
 .about-photo-placeholder {
-    width: 100%; aspect-ratio: 1; border-radius: 32px;
+    width: 100%; height: 100%; max-height: 500px;
+    border-radius: 32px;
     background: linear-gradient(135deg, var(--accent3) 0%, var(--accent2) 50%, var(--accent) 100%);
     display: flex; align-items: center; justify-content: center;
     font-size: 6rem; position: relative; overflow: hidden;
 }
+.about-photo-placeholder img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 32px;
+}
 .about-photo-placeholder::after {
-    content: 'YOUR\nPHOTO'; white-space: pre;
-    position: absolute; color: rgba(255,255,255,0.2);
-    font-family: var(--font-mono); font-size: 0.8rem;
-    letter-spacing: 0.15em; text-align: center; line-height: 2;
+    content: ''; display: none;
 }
 .about-tag {
     position: absolute; background: var(--bg);
@@ -314,14 +319,19 @@ nav {
 .projects-grid { display: grid; gap: 24px; }
 .project-card {
     display: grid; grid-template-columns: 1fr 1fr;
-    background: var(--card-bg); border: 1px solid var(--card-border);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 28px; overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 .project-card:hover {
-    border-color: rgba(255,255,255,0.15);
-    transform: scale(1.01);
-    box-shadow: 0 32px 64px rgba(0,0,0,0.5);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(232,255,71,0.25);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 32px 64px rgba(0,0,0,0.6), 0 0 40px rgba(232,255,71,0.08);
 }
 .project-card:nth-child(even) { direction: rtl; }
 .project-card:nth-child(even) > * { direction: ltr; }
@@ -335,10 +345,11 @@ nav {
     font-size: 5rem; position: relative;
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.project-card:hover .project-visual-inner { transform: scale(1.05); }
+.project-card:hover .project-visual-inner { transform: scale(1.08) rotate(1.5deg); }
 .pv1 { background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); }
 .pv2 { background: linear-gradient(135deg, #1a0a00, #3d1a00, #7c3300); }
 .pv3 { background: linear-gradient(135deg, #0d0d1a, #1a0d2e, #2d1a4d); }
+.pv4 { background: linear-gradient(135deg, #001f1a, #003d33, #007c66); }
 .project-info { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
 .project-num {
     font-family: var(--font-mono); font-size: 0.75rem;
@@ -349,9 +360,15 @@ nav {
 .project-desc { color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; margin-bottom: 24px; }
 .project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
 .project-tech span {
-    background: rgba(232,255,71,0.08); color: var(--accent);
-    border: 1px solid rgba(232,255,71,0.2); border-radius: 100px;
-    padding: 4px 14px; font-size: 0.72rem; font-family: var(--font-mono);
+    background: rgba(232,255,71,0.05); color: var(--accent);
+    border: 1px solid rgba(232,255,71,0.15); border-radius: 100px;
+    padding: 6px 16px; font-size: 0.75rem; font-family: var(--font-mono);
+    transition: all 0.3s ease;
+}
+.project-card:hover .project-tech span {
+    background: rgba(232,255,71,0.12);
+    border-color: rgba(232,255,71,0.4);
+    box-shadow: 0 0 16px rgba(232,255,71,0.1);
 }
 .project-links { display: flex; gap: 12px; }
 .project-link {
@@ -361,6 +378,34 @@ nav {
     transition: color 0.2s;
 }
 .project-link:hover { color: var(--accent); }
+
+/* Project images */
+.project-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===================== RESUME ===================== */
+#resume { background: var(--bg); overflow: hidden; }
+.resume-header { text-align: center; margin-bottom: 48px; }
+.resume-header .section-label::before { content: '04. '; }
+.resume-heading {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800; letter-spacing: -0.03em;
+    margin-bottom: 16px;
+}
+.resume-sub {
+    color: var(--text-muted); font-size: 1.05rem;
+    line-height: 1.7; max-width: 520px; margin: 0 auto 32px;
+}
+.resume-actions {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+}
+.resume-actions .btn-primary {
+    cursor: pointer;
+    border: none; font-family: var(--font-display);
+}
 
 /* ===================== MARQUEE ===================== */
 .marquee-section {
@@ -390,7 +435,7 @@ nav {
     pointer-events: none;
 }
 .contact-label { }
-.contact-label::before { content: '04. '; }
+.contact-label::before { content: '05. '; }
 .contact-heading {
     font-size: clamp(2.5rem, 7vw, 6rem);
     font-weight: 800; letter-spacing: -0.04em;
@@ -530,14 +575,22 @@ footer p { color: var(--text-muted); font-family: var(--font-mono); font-size: 0
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
-    .about-stats { grid-template-columns: repeat(3, 1fr); }
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
     .hero-badges { display: none; }
     .project-card { grid-template-columns: 1fr; }
     .project-card:nth-child(even) { direction: ltr; }
     .nav-links { display: none; }
     .orbit-container { display: none; }
+    .project-visual { aspect-ratio: 16/9; }
+    .project-info { padding: 24px; }
+    .about-visual { max-height: 400px; }
+    .about-photo-placeholder { max-height: 400px; }
 }
 @media (max-width: 480px) {
-    .about-stats { grid-template-columns: 1fr 1fr; }
+    .about-stats { grid-template-columns: 1fr; gap: 12px; }
     .hero-actions { flex-direction: column; }
+    .resume-heading { font-size: 1.8rem; }
+    .about-visual { max-height: 350px; }
+    .about-photo-placeholder { max-height: 350px; }
+    .stat { padding: 16px; }
 }
